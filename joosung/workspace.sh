@@ -12,7 +12,7 @@ while [ $attempts -gt 0 ]; do
         attempts=$((attempts - 1))
         if [ $attempts -eq 0 ]; then
             echo "Access denied."
-            exit 1
+            exit
         else
             echo "Incorrect password. Please try again."
         fi
@@ -43,7 +43,7 @@ continuePrompt() {
         echo
         echo "Bye!"
         echo
-        exit 0
+        exit
     fi
 }
 
@@ -61,8 +61,6 @@ task1() {
 
     odd_product=1
     even_product=1
-    odd_count=0
-    even_count=0
     echo
     echo "Triangular numbers:"
 
@@ -74,11 +72,9 @@ task1() {
         elif [ $tri_num -ge $start ]; then
             if ((tri_num % 2 == 0)); then
                 echo "$tri_num"
-                even_count=$((even_count + 1))
                 even_product=$((even_product * tri_num))
             else
                 echo "$tri_num"
-                odd_count=$((odd_count + 1))
                 odd_product=$((odd_product * tri_num))
             fi
         fi
