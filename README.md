@@ -14,9 +14,12 @@ December 6 Friday, 2024
 2. Commit and sync/push to share for group memebers.
 3. We will review and discuss the codes offline.
 4. Combine our codes to *Group_27_Application.sh*
-5. We will discuss offline about flowchard and personal document later.
+5. We will discuss offline about flowchart and personal document later.
 
 (Let's talk the details offline on next Tuesday at School)
+
+## Temporary Flowchart
+[Flowchart](https://helix-vest-616.notion.site/COMP1236-Flowchart-137db0e1bb25805786f0ee93683d8bee?pvs=4)
 
 ## Submit
 *Group_No_Project.zip* contains three files:
