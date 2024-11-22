@@ -1,44 +1,74 @@
-read -p "Please Enter the password: " password
 
-if [[ $password == "App1" ]]; then
-
+while true; do
     echo "
 
-*****************************
+******************************
 
         Menu Section
 
-*****************************
+******************************
 
 "
-    while true; do
-        echo "
+    echo "
 Here are your choices:
 1. Option 1: A-a
 2. Option 2: B-b
 3. Option 3: C-c
 "
-        read -p "Please choose one of the options: " opt
+    read -p "Please choose one of the options: " opt
 
-        case $opt in
-            [Aa])
-                echo "Welcome to Task 1"
-                break
-                ;;
-            [Bb])
-                echo "Welcome to Task 2"
-                break
-                ;;
-            [Cc])
-                echo "Welcome to Task 3"
-                break
-                ;;
-            *)
-                echo "Please enter a correct option!"
-                ;;
-        esac
-    done
+    case $opt in
+        [Aa])
+            echo "Welcome to Task 1"
+         
+            ;;
+        [Bb])
+            echo "Welcome to Task 2"
+            
+            ;;
+        [Cc])
+            echo "Welcome to Task 3"
+          
+           
+            ;;
+        *)
+            echo "Invalid option selected! Please try again."
+            continue
+            ;; 
+    esac
 
-else
-    echo "Incorrect password. Access denied!"
-fi
+    
+    echo "
+***************************
+
+       Final Options
+
+***************************
+" 
+
+    echo "Please choose your options: 
+1. Continue with another task
+2. Exit
+"
+    read -p "Do you want to continue or exit? " answ
+
+    case $answ in 
+        1)
+            echo "Welcome again to the program!"
+            ;;  
+        2)
+            echo "Thanks! Have a nice time ! Goodbye!"
+            break  
+            ;;
+        *)
+            echo "Invalid input! Returning to the menu..."
+            ;;  
+    esac
+done
+
+
+
+
+
+
+
