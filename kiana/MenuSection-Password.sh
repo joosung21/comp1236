@@ -1,5 +1,20 @@
 
 while true; do
+    read -p "Please enter the password: " password
+
+
+    if [[ $password == "App1" ]]; then
+        echo "Password correct! Access granted."
+        break 
+    else
+        echo "Incorrect password! Please try again."       
+    fi
+done
+
+
+
+
+while true; do
     echo "
 
 ******************************
