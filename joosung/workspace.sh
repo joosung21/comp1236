@@ -1,6 +1,6 @@
 # Check Password
 password="App1"
-# attempts=3
+attempts=3
 
 while ((attempts > 0))
 do
