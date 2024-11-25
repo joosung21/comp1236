@@ -1,23 +1,12 @@
 # Check Password
 password="App1"
-attempts=3
 
-while ((attempts > 0))
+until [ "$password_input" == "$password" ]
 do
     read -p "Enter password: " password_input
-
-    if [ "$password_input" == "$password" ] 
+    if [ "$password_input" != "$password" ]
     then
-        break
-    else
-        attempts=$((attempts - 1))
-        if ((attempts == 0))
-        then
-            echo "Access denied."
-            exit
-        else
-            echo "Incorrect password. Please try again."
-        fi
+        echo "Incorrect password. Please try again."
     fi
 done
 
