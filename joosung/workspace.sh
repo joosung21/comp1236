@@ -61,6 +61,9 @@ task1() {
 
     odd_product=1
     even_product=1
+    odd_count=0
+    even_count=0
+
     echo
     echo "Triangular numbers:"
 
@@ -76,9 +79,11 @@ task1() {
             if ((tri_num % 2 == 0))
             then
                 echo "$tri_num"
+                even_count=$((even_count + 1))
                 even_product=$((even_product * tri_num))
             else
                 echo "$tri_num"
+                odd_count=$((odd_count + 1))
                 odd_product=$((odd_product * tri_num))
             fi
         fi
@@ -86,6 +91,8 @@ task1() {
     done
 
     echo
+    echo "Odd count: $odd_count"
+    echo "Even count: $even_count"
     echo "Product of odd: $odd_product"
     echo "Product of even: $even_product"
 
